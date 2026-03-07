@@ -12,7 +12,7 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #06080f; }
+    body { background: #F4F5FA; }
     #root { min-height: 100vh; }
   </style>
 </head>
@@ -25,15 +25,15 @@
 //  DESIGN TOKENS
 // ═══════════════════════════════════════════
 const C = {
-  bg: "#06080f", bgCard: "#0c1019", bgPanel: "#111827",
-  surface: "#161d2e", surfaceLight: "#1c2540",
-  accent: "#00e6a0", accentDim: "#00c98a", accentMuted: "rgba(0,230,160,0.12)",
-  purple: "#8b5cf6", purpleMuted: "rgba(139,92,246,0.12)",
-  orange: "#f59e0b", orangeMuted: "rgba(245,158,11,0.12)",
-  pink: "#ec4899", blue: "#3b82f6", blueMuted: "rgba(59,130,246,0.12)",
-  text: "#e4e8f1", dim: "#6b7a94", muted: "#3d4a5e",
-  border: "#1a2236", borderLight: "#232f47",
-  white: "#fff", black: "#000", success: "#22c55e",
+  bg: "#F4F5FA", bgCard: "#FFFFFF", bgPanel: "#FFFFFF",
+  surface: "#ECEEF8", surfaceLight: "#E4E7F5",
+  accent: "#4F46E5", accentDim: "#4338CA", accentMuted: "rgba(79,70,229,0.10)",
+  purple: "#7C3AED", purpleMuted: "rgba(124,58,237,0.10)",
+  orange: "#F59E0B", orangeMuted: "rgba(245,158,11,0.10)",
+  pink: "#EC4899", blue: "#3B82F6", blueMuted: "rgba(59,130,246,0.10)",
+  text: "#1F2937", dim: "#6B7280", muted: "#9CA3AF",
+  border: "#E5E7EB", borderLight: "#F3F4F6",
+  white: "#fff", black: "#fff", success: "#22C55E",
 };
 
 const FONT = `'Outfit', 'DM Sans', -apple-system, sans-serif`;
@@ -200,7 +200,7 @@ function PCView({ onDone }) {
     return (
       <div onClick={() => {}} style={{
         position: "fixed", inset: 0, zIndex: 100,
-        background: "rgba(0,0,0,.7)", backdropFilter: "blur(8px)",
+        background: "rgba(15,15,40,.55)", backdropFilter: "blur(10px)",
         display: "flex", alignItems: "center", justifyContent: "center",
         animation: "overlayIn .3s ease",
       }}>
