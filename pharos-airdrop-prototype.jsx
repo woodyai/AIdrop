@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pharos AI Drop Zone</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #F4F5FA; }
-    #root { min-height: 100vh; }
-  </style>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="text/babel">
-    const { useState, useEffect, useCallback } = React;
+import { useState, useEffect, useCallback } from "react";
 
 // ═══════════════════════════════════════════
 //  DESIGN TOKENS
@@ -110,7 +89,7 @@ function getBonus(tier) { return tier === 3 ? 3 : tier === 2 ? 2 : 1; }
 // ═══════════════════════════════════════════
 //  VIEW SWITCHER (top‑level)
 // ═══════════════════════════════════════════
-function App() {
+export default function App() {
   const [view, setView] = useState("pc"); // "pc" | "app"
   const [sharedAnswers, setSharedAnswers] = useState(null);
 
@@ -882,8 +861,3 @@ function AppView({ answers, onBack }) {
     </div>
   );
 }
-
-    ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
-  </script>
-</body>
-</html>
